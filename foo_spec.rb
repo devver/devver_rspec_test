@@ -235,5 +235,12 @@ describe Foo do
     end
 
   end
+
+  describe "mocks" do
+    it "should raise a MockExpectationError" do
+      @it = Object.new
+      @it.should_receive(:poke!)
+    end
+  end
   
 end
